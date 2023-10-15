@@ -36,11 +36,12 @@ Answer is : {{ans}}
 </div> -->
 <input #newTaskElem type="text" [(ngModel)]="newTask" (keyup)="errorMsg = '';"> <br>
 <small>{{errorMsg}}</small> <br>
-<button *ngIf="!isEdit" (click)="add(newTaskElem.value)">Add Task</button> 
-<button *ngIf="isEdit" (click)="save()">Edit Task</button> 
-<button *ngIf="isEdit" (click)="cancelEdit()">Cancel</button> 
+<button class="btn btn-primary" *ngIf="!isEdit" (click)="add(newTaskElem.value)">Add Task</button> 
+<button class="btn btn-primary" *ngIf="isEdit" (click)="save()">Edit Task</button> 
+<button class="btn btn-primary" *ngIf="isEdit" (click)="cancelEdit()">Cancel</button> 
 
 <br>
+
 
 <ol>
     <li *ngFor="let task of todo;index as i">
